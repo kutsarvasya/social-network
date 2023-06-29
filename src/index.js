@@ -13,7 +13,7 @@ root.render(
   // <React.StrictMode>
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <BrowserRouter basename="social-network">
+      <BrowserRouter basename="/social-network">
         <App />
       </BrowserRouter>
     </PersistGate>
