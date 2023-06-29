@@ -10,7 +10,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="tweets" element={<TweetsPage />} />
       </Route>
-      <Route path="*" element={<Navigate to={"/"} />} />
+      {/* <Route path="*" element={<Navigate to={"/"} />} /> */}
     </Routes>
   );
 }
