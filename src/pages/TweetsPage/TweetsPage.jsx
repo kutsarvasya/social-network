@@ -5,11 +5,15 @@ import { getTweetThank } from "../../store/TweetsThank";
 import { actions } from "../../store/TweetsSlice";
 import { useEffect, useMemo } from "react";
 import FilterMenu from "../../componets/FilterMenu/FilterMenu";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function TweetsPage() {
   const dispatch = useDispatch();
   const { users, page, hidden, isActive, filter } = useSelector(
     (state) => state.tweets
   );
+
   const usersFilter = useMemo(() => {
     return users.filter((user) => {
       if (filter === "all") {
@@ -22,17 +26,19 @@ function TweetsPage() {
       return user;
     });
   }, [filter, users]);
-  console.log(usersFilter);
+
   useEffect(() => {
     if (isActive) return;
     dispatch(actions.active());
-    console.log(isActive);
     dispatch(getTweetThank(page))
       .unwrap()
       .then((data) => {
         if (data.length < 3) {
           dispatch(actions.visibility());
         }
+      })
+      .catch((error) => {
+        toast.error(error.message);
       });
   }, [dispatch, isActive, page]);
 
@@ -52,6 +58,7 @@ function TweetsPage() {
           LOAD MORE
         </button>
       )}
+      <ToastContainer />
     </Container>
   );
 }
