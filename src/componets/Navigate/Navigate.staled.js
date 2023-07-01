@@ -12,6 +12,9 @@ export const Link = styled(NavLink)`
     color: white;
     background-color: #1976d2;
   }
+  &:hover {
+    background-color: blue;
+  }
 `;
 export const Nav = styled.nav`
   gap: 15px;

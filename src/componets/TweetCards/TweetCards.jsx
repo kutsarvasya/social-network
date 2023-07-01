@@ -18,15 +18,15 @@ import { changeNumber } from "../../changeNumber";
 function TweetCards({ userCard }) {
   const dispatch = useDispatch();
 
-  const { avatar, follow, followers, tweets, id } = userCard;
+  const { avatar, follow, followers, tweets, id, name } = userCard;
 
   return (
     <Card>
-      <ImgLogo src={logo} alt="" width={308} height={168} />
-      <ImgGoIT src={logoGoIT} alt="" />
+      <ImgLogo src={logo} alt="logo" width={308} height={168} />
+      <ImgGoIT src={logoGoIT} alt="logoGoIT" />
       <Line />
-      <Border src={border} alt="" />
-      <ImgAvatar width={80} height={80} src={avatar} alt="" />
+      <Border src={border} alt="border" />
+      <ImgAvatar width={80} height={80} src={avatar} alt={name} />
 
       <Title> {tweets} TWEETS</Title>
       <Title>{changeNumber(String(followers))} FOLLOWERS</Title>

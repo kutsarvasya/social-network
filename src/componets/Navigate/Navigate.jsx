@@ -4,7 +4,7 @@ function Navigate() {
   return (
     <Nav>
       <Link to="/">HOME</Link>
-      <Link to="/tweets">TWEETS</Link>
+      <Link to="tweets">TWEETS</Link>
     </Nav>
   );
 }
