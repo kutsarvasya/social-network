@@ -21,9 +21,7 @@ function TweetCards({ userCard }) {
     <Card>
       <ImgLogo src={logo} alt="logo" width={308} height={168} />
       <ImgGoIT src={logoGoIT} alt="logoGoIT" />
-
       <ImgAvatar width={80} height={80} src={avatar} alt={name} />
-
       <Title> {tweets} TWEETS</Title>
       <Title>{changeNumber(String(followers))} FOLLOWERS</Title>
       <Button

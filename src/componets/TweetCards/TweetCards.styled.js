@@ -37,8 +37,6 @@ export const ImgLogo = styled.img`
 `;
 
 export const ImgAvatar = styled.img`
-  width: 80px;
-  height: 80px;
   z-index: 9;
   border-radius: 50px;
   position: absolute;
@@ -61,6 +59,7 @@ export const Title = styled.h2`
 `;
 
 export const Button = styled.button`
+  cursor: pointer;
   width: 196px;
   height: 50px;
   border: none;
@@ -73,13 +72,7 @@ export const Button = styled.button`
   line-height: 1.2;
   background-color: ${(props) =>
     props.children === "FOLLOW" ? "#EBD8FF" : "#5CD3A8"};
-`;
-export const Border = styled.img`
-  width: 90px;
-  height: 90px;
-  z-index: 10;
-  position: absolute;
-  top: 178px;
-  left: 50%;
-  transform: translate(-50%);
+  :hover {
+    outline: 2px solid yellow;
+  }
 `;
