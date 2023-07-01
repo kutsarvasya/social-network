@@ -11,6 +11,18 @@ export const Card = styled.div`
   background: linear-gradient(to left, #471ca9 100%, #5736a3 50%, #4b2a99 100%);
   border-radius: 20px;
   padding: 28px 36px;
+
+  ::after {
+    position: absolute;
+    top: 214px;
+    content: "";
+    background-color: #fbf8ff;
+    width: 380px;
+    height: 8px;
+    box-shadow: 0px 3.4369285106658936px 2.5776965618133545px 0px #fbf8ff inset,
+      0px 3.4369285106658936px 3.4369285106658936px 0px rgba(0, 0, 0, 0.06),
+      0px -1.7184642553329468px 3.4369285106658936px 0px #ae7be3 inset;
+  }
 `;
 
 export const ImgGoIT = styled.img`
@@ -23,17 +35,7 @@ export const ImgLogo = styled.img`
   height: 168px;
   margin-bottom: 88px;
 `;
-export const Line = styled.div`
-  position: absolute;
-  left: 0;
-  background-color: #fbf8ff;
-  width: 380px;
-  height: 8px;
-  top: 214px;
-  box-shadow: 0px 3.4369285106658936px 2.5776965618133545px 0px #fbf8ff inset,
-    0px 3.4369285106658936px 3.4369285106658936px 0px rgba(0, 0, 0, 0.06),
-    0px -1.7184642553329468px 3.4369285106658936px 0px #ae7be3 inset;
-`;
+
 export const ImgAvatar = styled.img`
   width: 80px;
   height: 80px;
@@ -43,6 +45,8 @@ export const ImgAvatar = styled.img`
   top: 178px;
   left: 50%;
   transform: translate(-50%);
+  outline: 8px solid;
+  outline-color: #ebd8ff;
 `;
 export const Title = styled.h2`
   color: #ebd8ff;

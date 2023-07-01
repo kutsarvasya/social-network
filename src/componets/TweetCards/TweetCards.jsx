@@ -1,16 +1,13 @@
 import {
-  Border,
   Button,
   Card,
   ImgAvatar,
   ImgGoIT,
   ImgLogo,
-  Line,
   Title,
 } from "./TweetCards.styled";
 import logo from "../../img/logo.png";
 import logoGoIT from "../../img/logoGoIT.svg";
-import border from "../../img/border.svg";
 import { useDispatch } from "react-redux";
 import { actions } from "../../store/TweetsSlice";
 import { changeNumber } from "../../changeNumber";
@@ -24,8 +21,7 @@ function TweetCards({ userCard }) {
     <Card>
       <ImgLogo src={logo} alt="logo" width={308} height={168} />
       <ImgGoIT src={logoGoIT} alt="logoGoIT" />
-      <Line />
-      <Border src={border} alt="border" />
+
       <ImgAvatar width={80} height={80} src={avatar} alt={name} />
 
       <Title> {tweets} TWEETS</Title>
